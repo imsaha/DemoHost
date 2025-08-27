@@ -2,17 +2,17 @@
 set -e   # Exit immediately if any command fails
 
 # 1. Update & install dependencies
-sudo apt-get update
-sudo apt-get install -y wget apt-transport-https software-properties-common
+apt-get update
+apt-get install -y wget apt-transport-https software-properties-common
 
 # 2. Add Microsoft package signing key and repo
 wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
+dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
 # 3. Install .NET 9 SDK and runtime
-sudo apt-get update
-sudo apt-get install -y dotnet-sdk-9.0 dotnet-runtime-9.0
+apt-get update
+apt-get install -y dotnet-sdk-9.0 dotnet-runtime-9.0
 
 # 4. Verify installation
 dotnet --list-sdks
