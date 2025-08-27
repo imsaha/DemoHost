@@ -25,6 +25,6 @@ dotnet build
 dotnet publish -c Release -r linux-x64 --self-contained false -o ./publish
 
 # 7. Run the published application
-dotnet ./publish/DemoHost.dll
+dotnet ./publish/DemoHost.dll --urls "http://0.0.0.0:5000"
 
 echo "Build & publish completed. Check the ./publish folder."
