@@ -6,7 +6,7 @@ apt-get update
 apt-get install -y wget apt-transport-https software-properties-common
 
 # 2. Add Microsoft package signing key and repo
-wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 
